@@ -47,3 +47,54 @@
                             ng build --base-href /project/
                             or
                             ng build --bh /project/
+
+## Import the Angular router
+
+    The Angular router is in an `external` Angular module called RouterModule. 
+    
+    The RouterModule provides the router 
+        
+        service: to manage navigation and URL manipulation.
+
+        configuration: for configuring our routes, and directives for activating and displaying routes. 
+        
+        The RouterLink directive ties a clickable HTML element to a route path. 
+        
+        When a user clicks on the element, the route is activated, and the associated component's template is displayed.
+
+        RouterLinkActive: associates a style with the active RouterLink. 
+
+        RouterOutlet: defines where to display the template.
+
+        provides two methods-- forRoot and forChild. 
+        
+        RouterModule.forRoot:
+
+            declares the router directives, 
+            
+            manages our route configuration, and 
+            
+            registers the router service. 
+            
+            We use it only once in an application normally when defining the basic application routes.
+
+            only one router service is registered.
+
+        RouterModule.forChild 
+            declares the router directives and 
+            
+            manages our route configuration, but 
+            
+            it does not register the router service again.
+
+            can be used in every feature module.
+
+    # 1st
+        `import { RouterModule } from '@angular/router';`
+    ...
+    # 2nd
+        `@NgModule({
+            imports: [
+                RouterModule.forRoot[()]
+            ]
+        })`
