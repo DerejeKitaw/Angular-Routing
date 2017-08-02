@@ -98,3 +98,11 @@
                 RouterModule.forRoot[()]
             ]
         })`
+
+## Configure the routes to define which route path activates which component.
+
+    The router has no routes until we configure them. 
+    
+    A route configuration defines a set of components and the route segment required to activate the component and display the component's template. 
+    
+   The order of the routes in config array matters.
