@@ -62,3 +62,18 @@
             `git branch  03_createNavigation`
             `git checkout  03_createNavigation`
             `git push --set-upstream origin  03_createNavigation`
+
+    ## Install bootstrap
+
+        `npm install bootstrap --save`
+
+    ## Configure bootstarp
+
+        "styles": [
+            "../node_modules/bootstrap/dist/css/bootstrap.min.css",
+        "styles.css"
+        ],
+
+        restart server to see bootstrap working
+
+        
