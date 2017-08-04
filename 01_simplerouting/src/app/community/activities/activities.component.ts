@@ -1,16 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { NavComponent } from '../../core/nav/nav.component';
 
 class MenuItem {
   constructor(public caption: string, public link: any[]) { }
 }
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'activities',
+  templateUrl: './activities.component.html',
+  styleUrls: ['./activities.component.css']
 })
-export class AppComponent {
-  title = 'app';
+export class ActivitiesComponent implements OnInit {
+
   menuItemsInputs: MenuItem[] = [
       { caption: 'Community', link: ['/community'] },
       { caption: 'Housing', link: ['/housing'] },
@@ -20,4 +21,9 @@ export class AppComponent {
       { caption: 'Services', link: ['/services'] },
       { caption: 'Resumes', link: ['/resumes'] },
     ];
+  constructor() { }
+
+  ngOnInit() {
+  }
+
 }

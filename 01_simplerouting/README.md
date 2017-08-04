@@ -14,7 +14,7 @@
     # The above steps are saved in simpleroutinginside
         `git branch simpleroutinginside`
         `git checkout simpleroutinginside`
-        `git push --set-upstream origion simpleroutinginside`
+        `git push --set-upstream origin simpleroutinginside`
 
 # Create components 
 
