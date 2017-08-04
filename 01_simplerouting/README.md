@@ -41,6 +41,9 @@
 
 # Create navigation components 
     `ng g c core/nav`
-     `git branch createcomponents`
+        `git branch createcomponents`
         `git checkout createcomponents`
         `git push --set-upstream origin createcomponents`
+        rename createcomponents to 02_createcomponents
+        git branch -m createcomponents 02_createcomponents
+        git push --set-upstream origin 02_createcomponents
