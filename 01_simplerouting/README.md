@@ -11,7 +11,36 @@
 
     check : http://localhost:4200/home should display home works
 
---The above steps are saved in simpleroutinginside
-    `git branch simpleroutinginside`
-    `git checkout simpleroutinginside`
-    `git push --set-upstream origion simpleroutinginside`
+    # The above steps are saved in simpleroutinginside
+        `git branch simpleroutinginside`
+        `git checkout simpleroutinginside`
+        `git push --set-upstream origion simpleroutinginside`
+
+# Create components 
+
+    `communityComponent`
+        `ng g c community` --dry
+    
+    `housing`
+        `ng g c housing`
+    
+    `personal`
+        `ng g c personal`
+    
+    `forSale`
+        `ng g c forSale`
+    
+    `jobs`
+        `ng g c jobs`
+    
+    `services`
+        `ng g c services`
+    
+    `resumes`
+        `ng g c resumes`
+
+# Create navigation components 
+    `ng g c core/nav`
+     `git branch createcomponents`
+        `git checkout createcomponents`
+        `git push --set-upstream origion createcomponents`
