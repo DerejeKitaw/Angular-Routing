@@ -43,4 +43,4 @@
     `ng g c core/nav`
      `git branch createcomponents`
         `git checkout createcomponents`
-        `git push --set-upstream origion createcomponents`
+        `git push --set-upstream origin createcomponents`
