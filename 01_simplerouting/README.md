@@ -11,3 +11,4 @@
 
     check : http://localhost:4200/home should display home works
 
+--The above steps are saved in simpleroutinginside
