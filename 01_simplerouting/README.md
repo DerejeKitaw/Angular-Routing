@@ -57,6 +57,8 @@
 
         `git branch -m <newname> `    
 
-        Rename createcomponents to 03_createNavigation
-            git checkout createcomponents
-            git branch -m 
+        Create branch 03_createNavigation
+
+            `git branch  03_createNavigation`
+            `git checkout  03_createNavigation`
+            `git push --set-upstream origin  03_createNavigation`
