@@ -44,6 +44,19 @@
         `git branch createcomponents`
         `git checkout createcomponents`
         `git push --set-upstream origin createcomponents`
+
         rename createcomponents to 02_createcomponents
+
         git branch -m createcomponents 02_createcomponents
+
+        If you want to rename a branch while pointed to any branch, do: `git branch -m <oldname> <newname>`
+
         git push --set-upstream origin 02_createcomponents
+
+        If you want to rename the current branch, you can do:
+
+        `git branch -m <newname> `    
+
+        Rename createcomponents to 03_createNavigation
+            git checkout createcomponents
+            git branch -m 
