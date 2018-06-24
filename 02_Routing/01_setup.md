@@ -1,4 +1,4 @@
-# Install routes
+# [Install routes](https://angular-routing-der.stackblitz.io/home)
 app.module.ts
 ```ts
 import {RouterModule, Routes } from '@angular/router';
