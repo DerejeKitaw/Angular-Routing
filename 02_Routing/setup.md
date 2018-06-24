@@ -16,8 +16,15 @@ const routes: Routes = [
   declarations: [AppComponent, HomeComponent],
   imports: [
     RouterModule.forRoot(routes), // <-- will make router-outlet directive available to our template.
+    // RouterModule.forRoot(routes) is a function that will take our routes, configure the router, and 
+    // return a list of dependencies like RouteRegistry, Location, and several other classes that are 
+    // necessary to make routing work. In our providers we have this:
+
   ],
-  providers: [],
+  providers: [
+  // for "hash-bang" routing Eg. http://localhost:3300/#/home
+    { provide: LocationStrategy, useClass: HashLocationStrategy }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
@@ -72,3 +79,15 @@ export class AppComponent {
 export class AppModule { }
 ```
 3. When deploying to production we can also set the value of the base-href by using the --base-href command-line option
+
+# To retrieve the parameter for a given route (
+1. Import `ActivateRoute` where you need to retrive parameters Eg. ProductComponent
+2. Inject `ActivatedRoute` into the constructor of our component.
+product.component.ts
+```ts
+import { ActivatedRoute } from '@angular/router';
+  id: string;
+constructor(private route: ActivatedRoute) {
+  route.params.subscribe(params => { this.id = params['id']; });
+}
+```
