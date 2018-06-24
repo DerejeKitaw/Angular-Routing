@@ -37,6 +37,10 @@ app.component.html
 ```html
 <div class="navLinks">
   <a [routerLink]="['/home']">Home</a>
+  <div>
+    <input type="text" #newquery [value]="query" (keydown.enter)="submit(newquery.value)">
+    <button (click)="submit(newquery.value)">Search</button>
+  </div>
 </div>
 
 <router-outlet></router-outlet>
@@ -52,6 +56,7 @@ import {Router} from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+query: string;
   constructor(private router: Router) {
   };
 }
