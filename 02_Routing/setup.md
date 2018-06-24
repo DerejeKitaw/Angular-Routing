@@ -83,6 +83,13 @@ export class AppModule { }
 # To retrieve the parameter for a given route (
 1. Import `ActivateRoute` where you need to retrive parameters Eg. ProductComponent
 2. Inject `ActivatedRoute` into the constructor of our component.
+3. Define route
+app.module.ts
+```ts
+const routes: Routes = [
+{ path: 'about/:id', component: AboutComponent }
+];
+```
 product.component.ts
 ```ts
 import { ActivatedRoute } from '@angular/router';
@@ -90,4 +97,8 @@ import { ActivatedRoute } from '@angular/router';
 constructor(private route: ActivatedRoute) {
   route.params.subscribe(params => { this.id = params['id']; });
 }
+```
+product.component.html
+```html
+{{id}}  // will retrive the id from the url
 ```
